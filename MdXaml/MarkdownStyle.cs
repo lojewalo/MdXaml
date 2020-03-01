@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Markup;
 
-namespace MdXaml
+namespace Markdown.Xaml
 {
     public static class MarkdownStyle
     {
@@ -19,16 +19,8 @@ namespace MdXaml
         */
         static void LoadXaml()
         {
-            /*
-                Workaround for XamlParseException.
-                When you don't load 'ICSharpCode.AvalonEdit.dll',
-                XamlReader fail to read xmlns:avalonEdit="http://icsharpcode.net..."
-             */
-            var txtedit = typeof(ICSharpCode.AvalonEdit.TextEditor);
-            txtedit.ToString();
-
             Assembly asm = Assembly.GetCallingAssembly();
-            using (var stream = asm.GetManifestResourceStream("MdXaml.Markdown.Style.xaml"))
+            using (var stream = asm.GetManifestResourceStream("Markdown.Xaml.Markdown.Style.xaml"))
             {
                 var resources = (ResourceDictionary)XamlReader.Load(stream);
                 _standard = (Style)resources["DocumentStyleStandard"];

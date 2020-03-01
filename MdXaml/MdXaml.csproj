@@ -4,7 +4,7 @@
     <OutputType>Library</OutputType>
     <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
     <UseWPF>true</UseWPF>
-    <PackageId>MdXaml</PackageId>
+    <PackageId>MdXaml_migfree</PackageId>
     <Version>1.3.0</Version>
     <Authors>Bevan Arps(original); whistyun</Authors>
     <Company />
@@ -13,6 +13,8 @@
     <PackageProjectUrl>https://github.com/whistyun/MdXaml</PackageProjectUrl>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	<PackageTags>Markdown WPF Xaml FlowDocument</PackageTags>
+	<AssemblyName>Markdown.Xaml</AssemblyName>
+	<RootNamespace>Markdown.Xaml</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,14 +23,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Markdown.Style.xaml" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <PackageReference Include="AvalonEdit" Version="5.0.4" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
-    <PackageReference Include="AvalonEdit" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>

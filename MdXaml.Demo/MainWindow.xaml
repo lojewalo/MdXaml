@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MdXaml.Demo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mdxam="clr-namespace:MdXaml;assembly=MdXaml"
+        xmlns:mdxam="clr-namespace:Markdown.Xaml;assembly=Markdown.Xaml"
         xmlns:local="clr-namespace:MdXaml.Demo"
         Title="MdXaml Demo"
         Height="600"

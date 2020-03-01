@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace MdXaml
+namespace Markdown.Xaml
 {
     public class TextToFlowDocumentConverter : DependencyObject, IValueConverter
     {

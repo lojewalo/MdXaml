@@ -1,6 +1,4 @@
-﻿using ICSharpCode.AvalonEdit;
-using ICSharpCode.AvalonEdit.Highlighting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Cache;
@@ -17,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MdXaml
+namespace Markdown.Xaml
 {
     public class Markdown : DependencyObject, IUriContext
     {
@@ -1145,15 +1143,8 @@ namespace MdXaml
             string lang = match.Groups[2].Value;
             string code = match.Groups[3].Value;
 
-            var txtEdit = new TextEditor();
-            var highlight = HighlightingManager.Instance.GetDefinitionByExtension("." + lang);
-            txtEdit.SyntaxHighlighting = highlight;
-
-            txtEdit.Text = code;
-            txtEdit.HorizontalAlignment = HorizontalAlignment.Stretch;
-            txtEdit.IsReadOnly = true;
-
-            var result = new BlockUIContainer(txtEdit);
+            var text = new Run(code);
+            var result = new Paragraph(text);
             if (CodeBlockStyle != null)
             {
                 result.Style = CodeBlockStyle;

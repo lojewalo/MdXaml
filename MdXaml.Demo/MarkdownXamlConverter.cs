@@ -17,20 +17,20 @@ namespace MdXaml.Demo
         // Using a DependencyProperty as the backing store for Markdown.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MarkdownProperty =
             DependencyProperty.Register("Markdown",
-                typeof(Markdown),
+                typeof(Markdown.Xaml.Markdown),
                 typeof(MarkdownXamlConverter),
                 new PropertyMetadata(null));
 
-        private Lazy<Markdown> mMarkdown;
+        private Lazy<Markdown.Xaml.Markdown> mMarkdown;
 
         public MarkdownXamlConverter()
         {
-            mMarkdown = new Lazy<Markdown>(MakeMarkdown);
+            mMarkdown = new Lazy<Markdown.Xaml.Markdown>(MakeMarkdown);
         }
 
-        public Markdown Markdown
+        public Markdown.Xaml.Markdown Markdown
         {
-            get { return (Markdown)GetValue(MarkdownProperty); }
+            get { return (Markdown.Xaml.Markdown)GetValue(MarkdownProperty); }
             set { SetValue(MarkdownProperty, value); }
         }
 
@@ -73,9 +73,9 @@ namespace MdXaml.Demo
             throw new NotImplementedException();
         }
 
-        private Markdown MakeMarkdown()
+        private Markdown.Xaml.Markdown MakeMarkdown()
         {
-            var markdown = new Markdown();
+            var markdown = new Markdown.Xaml.Markdown();
             return markdown;
         }
 
