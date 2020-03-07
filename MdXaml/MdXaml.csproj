@@ -11,10 +11,10 @@
     <Description>Markdown XAML processor(This have the api compability to Markdown.Xaml)</Description>
     <Copyright>Copyright (c) 2019 Bevan Arps, 2020 whistyun</Copyright>
     <PackageProjectUrl>https://github.com/whistyun/MdXaml</PackageProjectUrl>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<PackageTags>Markdown WPF Xaml FlowDocument</PackageTags>
-	<AssemblyName>Markdown.Xaml</AssemblyName>
-	<RootNamespace>Markdown.Xaml</RootNamespace>
+    <PackageTags>Markdown WPF Xaml FlowDocument</PackageTags>
+    <AssemblyName>Markdown.Xaml</AssemblyName>
+    <RootNamespace>Markdown.Xaml</RootNamespace>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,13 +23,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Markdown.Style.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
