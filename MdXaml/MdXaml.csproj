@@ -8,7 +8,7 @@
     <Version>1.3.0</Version>
     <Authors>Bevan Arps(original); whistyun</Authors>
     <Company />
-    <Description>Markdown XAML processor</Description>
+    <Description>Markdown XAML processor(This have the api compability to Markdown.Xaml)</Description>
     <Copyright>Copyright (c) 2019 Bevan Arps, 2020 whistyun</Copyright>
     <PackageProjectUrl>https://github.com/whistyun/MdXaml</PackageProjectUrl>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
