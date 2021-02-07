@@ -76,7 +76,7 @@ namespace MdXaml {
         /// <summary>
         /// Perform transformations that occur *within* block-level tags like paragraphs, headers, and list items.
         /// </summary>
-        private IEnumerable<Inline> RunSpanGamut(string text) {
+        public IEnumerable<Inline> RunSpanGamut(string text) {
             if (text is null) {
                 throw new ArgumentNullException(nameof(text));
             }
