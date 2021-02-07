@@ -2,36 +2,23 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UseWPF>true</UseWPF>
     <PackageId>MdXaml</PackageId>
     <Version>1.8.0</Version>
     <Authors>Bevan Arps(original); whistyun</Authors>
     <Company />
     <Description>Markdown XAML processor</Description>
     <Copyright>Copyright (c) 2010 Bevan Arps, 2020 whistyun</Copyright>
-    <PackageProjectUrl>https://github.com/whistyun/MdXaml</PackageProjectUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Markdown WPF Xaml FlowDocument</PackageTags>
-    <Configurations>Debug;Release</Configurations>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="EmojiTable.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="Markdown.Style.xaml" />
-    <Page Remove="MarkdownMigFree.Style.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="EmojiTable.txt" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <PackageReference Include="AvalonEdit" Version="5.0.4" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+  <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.0.0" />
   </ItemGroup>
 </Project>
