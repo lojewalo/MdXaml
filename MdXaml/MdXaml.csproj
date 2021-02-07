@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>netcoreapp3.0;net45</TargetFrameworks>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <PackageId>MdXaml</PackageId>
     <Version>1.8.0</Version>
@@ -25,7 +25,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="EmojiTable.txt" />
-    <EmbeddedResource Include="Markdown.Style.xaml" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
